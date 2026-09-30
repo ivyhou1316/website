@@ -1,0 +1,197 @@
+/* 全域基本重設 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #90bcee;
+    line-height: 1.6;
+}
+
+/* 1. 頁首區塊樣式（上方海浪圖可以改用背景圖替代，這裡先用深色漸層示範） */
+.header {
+    background: linear-gradient(to bottom, #5a8fcc, #90bcee);
+    color: white;
+    padding: 30px 50px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.header .light-text {
+    color: #ccc;
+}
+
+.header p {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* 2. 導覽列樣式（黑底黑按鈕） */
+.navbar {
+    background: linear-gradient(to bottom, #ffffff, #184e8d);
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #184e8d;
+}
+
+/* 3. 主內容包裝盒（限制最大寬度並置中，並用 Flex 讓左右並排） */
+.container {
+    display: flex;
+    width: 210mm;        /* A4 標準寬度 */
+    min-height: 297mm;   /* A4 標準高度 */
+    margin: 40px auto;   /* 讓紙張在畫面上上下留白、水平置中 */
+    background: #fff;
+    padding: 30px;       /* 增加內邊距，讓內容看起來像精美的報告版面 */
+    gap: 40px; 
+    
+    /* 選擇性加入：讓網頁看起來像一張立體紙張的陰影效果 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+}
+.header, .navbar, .footer {
+    width: 210mm;
+    margin: 0 auto;
+}
+
+/* 左側側邊欄（固定寬度） */
+.sidebar {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+/* 右側主要內容區（自動伸展填滿剩餘空間） */
+.main-content {
+    flex-grow: 1;
+}
+
+/* 側邊欄小元件（登入與新聞） */
+.widget {
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    background: linear-gradient(to bottom, #666, #222);
+    color: white;
+    padding: 8px 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+/* 登入表單樣式 */
+.login-form label {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 10px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background: #e0e0e0;
+    border: 1px solid #999;
+    cursor: pointer;
+}
+
+.forgot-link {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* 新聞列表樣式 */
+.news-list {
+    list-style: none;
+}
+
+.news-list li {
+    margin-bottom: 15px;
+    font-size: 0.85rem;
+}
+
+.news-list strong {
+    display: block;
+    color: #333;
+}
+
+.news-list a {
+    color: #666;
+}
+
+/* 右側文章樣式 */
+.post {
+    margin-bottom: 40px;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 20px;
+}
+
+.post h2 {
+    color: #000;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.post h3 {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.post p {
+    color: #444;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.post-meta {
+    text-align: right;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* 4. 頁尾樣式 */
+.footer {
+    background: linear-gradient(to bottom, #444, #111);
+    color: #aaa;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
