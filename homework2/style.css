@@ -6,21 +6,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* 🌟 新增：專門給頁首和照片的「置中包裹層」，鎖定所有內容都在中間 */
-.header-wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-/* ==================== 2. 頁首與照片樣式 ==================== */
+/* ==================== 2. 頁首與照片樣式（強制物理置中） ==================== */
 .main-header {
     width: 960px;
+    margin: 0 auto;           /* 🌟 核心：強制讓頁首在畫面水平置中 */
     background-color: #005b82;
     color: white;
     padding: 20px;
-    box-sizing: border-box; /* 防止 padding 撐大寬度 */
+    box-sizing: border-box;   /* 防止 padding 撐大寬度 */
 }
 .header-title {
     font-size: 24px; 
@@ -32,23 +25,24 @@ body {
     opacity: 0.8;
 }
 
-/* 🌟 新增：針對那張卡通照片的樣式，強制限制寬度並置中 */
+/* 🌟 照片本體樣式 */
 .banner-photo {
-    display: block;
-    width: 960px;        /* 寬度與導覽列、內容區保持一致 */
-    height: auto;        /* 高度依比例自動縮放 */
+    display: block;           /* 🌟 核心：轉為區塊元素才能使用 margin 置中 */
+    width: 960px;             /* 🌟 核心：寬度必須鎖死 960px 才能跟下方對齊 */
+    height: auto;             /* 高度依比例自動縮放 */
+    margin: 0 auto;           /* 🌟 核心：左右外邊距自動車牌，強制置中 */
 }
 
 /* ==================== 3. 導覽列漸層效果 ==================== */
 .navbar {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto;           /* 鎖定 960px 並置中 */
     background: linear-gradient(to bottom, #00b7ea 0%, #0087b4 100%);
     box-sizing: border-box;
 }
 .navbar ul {
     list-style: none;
-    display: flex; /* 讓選單橫向排列 */
+    display: flex; 
     justify-content: space-around;
     padding: 10px 0;
     margin: 0;
@@ -60,16 +54,15 @@ body {
 }
 
 /* ==================== 4. 網頁主體內容 ==================== */
-/* 網頁主體容器（白色背景、置中、左右留邊） */
 .container {
     width: 960px;
-    margin: 0 auto;
+    margin: 0 auto;           /* 鎖定 960px 並置中 */
     background-color: #ffffff;
     padding: 20px;
     box-sizing: border-box;
 }
 
-/* 三欄排版效果 (Flexbox) */
+/* 三欄排版效果 */
 .top-row {
     display: flex;
     justify-content: space-between;
@@ -91,7 +84,7 @@ body {
 }
 .right-col-40 { 
     width: 35%; 
-    background-color: #dff0f8; /* 右側區塊的淺藍色背景 */
+    background-color: #dff0f8; 
     padding: 15px;
     box-sizing: border-box;
 }
