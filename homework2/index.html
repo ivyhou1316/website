@@ -2,24 +2,25 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <title>FTDBLUEMOOD</title>
-    <!-- 連結 CSS 檔案 -->
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>網頁置中範例</title>
+    <!-- 這裡連結你的 CSS 檔案，例如：<link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
 
-    <!-- 1. 頁首 -->
-    <header class="main-header">
-        <div class="logo">FTDBLUEMOOD</div>
-        <p class="slogan">SMALL COMPANY SLOGAN GOES HERE</p>
-    </header>
+    <!-- 🌟 包裹層：確保頁首和照片完美置中並連動 -->
+    <div class="header-wrapper">
+        <!-- 頁首區塊 -->
+        <header class="main-header">
+            <div class="header-title">FTDBLUEMOOD</div>
+            <div class="header-slogan">SMALL COMPANY SLOGAN GOES HERE</div>
+        </header>
 
-    <!-- 2. 橫幅大圖 -->
-    <section class="banner">
-        <img src="image/header2.jpg" alt="Banner">
-    </section>
+        <!-- 🌟 照片本體（請把 src="your-photo-name.jpg" 換成你實際的照片檔名或路徑） -->
+        <img src="your-photo-name.jpg" alt="Banner" class="banner-photo">
+    </div>
 
-    <!-- 3. 導覽列 -->
+    <!-- 導覽列 -->
     <nav class="navbar">
         <ul>
             <li><a href="#">Home</a></li>
@@ -30,51 +31,38 @@
         </ul>
     </nav>
 
-    <!-- 網頁主體內容包裝 -->
-    <main class="container">
-        
-        <!-- 4.1 上方三欄區塊 -->
-        <section class="top-row">
+    <!-- 主體內容區 -->
+    <div class="container">
+        <!-- 上排三欄 -->
+        <div class="top-row">
             <div class="card">
                 <h3>Your Options</h3>
-                <p><img src="image"> 文字內容...</p>
+                <p>文字內容...</p>
             </div>
             <div class="card">
                 <h3>Company News</h3>
-                <p><img src="image"> 文字內容...</p>
+                <p>文字內容...</p>
             </div>
             <div class="card">
                 <h3>Have a Question?</h3>
-                <p><img src="image"> 文字內容...</p>
+                <p>文字內容...</p>
             </div>
-        </section>
+        </div>
 
-        <!-- 4.2 中間雙欄區塊 -->
-        <section class="middle-row">
-            <!-- 左側：成員介紹 -->
+        <!-- 下排雙欄 -->
+        <div class="middle-row">
             <div class="left-col-60">
                 <h2>Etiam felis ipsum</h2>
-                <div class="team-grid">
-                    <!-- 重複此結構來放四張照片與文字 -->
-                    <div class="member"><img src="image"><p>描述文字...</p></div>
-                </div>
+                <p>描述文字...</p>
             </div>
-            <!-- 右側：清單 -->
             <div class="right-col-40">
-                <h2>Duis blandit ultrices</h2>
+                <h3>Duis blandit ultrices</h3>
                 <ul>
                     <li><a href="#">DONEC TINCIDUNT PURUS VITAE</a></li>
-                    <!-- 更多列表項目 -->
                 </ul>
             </div>
-        </section>
-
-    </main>
-
-    <!-- 5. 頁尾 -->
-    <footer class="main-footer">
-        <p>Copyright © 2011. Designed by Free Web Templates...</p>
-    </footer>
+        </div>
+    </div>
 
 </body>
 </html>

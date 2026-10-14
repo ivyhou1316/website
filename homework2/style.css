@@ -1,4 +1,4 @@
-/* 全域重設與背景色 */
+/* ==================== 1. 全域重設與背景色 ==================== */
 body {
     margin: 0;
     padding: 0;
@@ -6,28 +6,45 @@ body {
     font-family: Arial, sans-serif;
 }
 
-/* 網頁主體容器（白色背景、置中、左右留邊） */
-.container {
-    width: 960px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 20px;
+/* 🌟 新增：專門給頁首和照片的「置中包裹層」，鎖定所有內容都在中間 */
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 
-/* 頁首樣式 */
+/* ==================== 2. 頁首與照片樣式 ==================== */
 .main-header {
     width: 960px;
-    margin: 0 auto;
     background-color: #005b82;
     color: white;
     padding: 20px;
+    box-sizing: border-box; /* 防止 padding 撐大寬度 */
+}
+.header-title {
+    font-size: 24px; 
+    font-weight: bold;
+}
+.header-slogan {
+    font-size: 14px; 
+    margin-top: 5px; 
+    opacity: 0.8;
 }
 
-/* 導覽列漸層效果 */
+/* 🌟 新增：針對那張卡通照片的樣式，強制限制寬度並置中 */
+.banner-photo {
+    display: block;
+    width: 960px;        /* 寬度與導覽列、內容區保持一致 */
+    height: auto;        /* 高度依比例自動縮放 */
+}
+
+/* ==================== 3. 導覽列漸層效果 ==================== */
 .navbar {
     width: 960px;
     margin: 0 auto;
     background: linear-gradient(to bottom, #00b7ea 0%, #0087b4 100%);
+    box-sizing: border-box;
 }
 .navbar ul {
     list-style: none;
@@ -40,6 +57,16 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* ==================== 4. 網頁主體內容 ==================== */
+/* 網頁主體容器（白色背景、置中、左右留邊） */
+.container {
+    width: 960px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* 三欄排版效果 (Flexbox) */
@@ -59,9 +86,12 @@ body {
 .middle-row {
     display: flex;
 }
-.left-col-60 { width: 65%; }
+.left-col-60 { 
+    width: 65%; 
+}
 .right-col-40 { 
     width: 35%; 
     background-color: #dff0f8; /* 右側區塊的淺藍色背景 */
     padding: 15px;
+    box-sizing: border-box;
 }
