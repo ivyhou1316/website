@@ -2,18 +2,18 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #0076a3; /* 圖片最外層的深藍色背景 */
+    background-color: #0076a3; /* 最外層的深藍色背景 */
     font-family: Arial, sans-serif;
 }
 
-/* ==================== 2. 頁首與照片樣式（強制物理置中） ==================== */
+/* ==================== 2. 頁首與照片樣式 ==================== */
 .main-header {
     width: 960px;
-    margin: 0 auto;           /* 🌟 核心：強制讓頁首在畫面水平置中 */
+    margin: 0 auto;           /* 水平置中 */
     background-color: #005b82;
     color: white;
     padding: 20px;
-    box-sizing: border-box;   /* 防止 padding 撐大寬度 */
+    box-sizing: border-box;   
 }
 .header-title {
     font-size: 24px; 
@@ -25,12 +25,14 @@ body {
     opacity: 0.8;
 }
 
-/* 🌟 照片本體樣式 */
+/* 🌟 核心修正：不管原圖多大，強制壓縮、裁剪並精準置中 */
 .banner-photo {
-    display: block;           /* 🌟 核心：轉為區塊元素才能使用 margin 置中 */
-    width: 960px;             /* 🌟 核心：寬度必須鎖死 960px 才能跟下方對齊 */
-    height: auto;             /* 高度依比例自動縮放 */
-    margin: 0 auto;           /* 🌟 核心：左右外邊距自動車牌，強制置中 */
+    display: block;
+    width: 960px;             /* 嚴格鎖定寬度 */
+    height: 350px;            /* 🌟 設定固定高度，防止大圖撐爆畫面 */
+    margin: 0 auto;           /* 左右自動車牌強制置中 */
+    object-fit: cover;        /* 🌟 關鍵：自動裁剪大圖，讓圖片正中央留下來 */
+    object-position: center;  /* 確保裁剪時以圖片中心為主 */
 }
 
 /* ==================== 3. 導覽列漸層效果 ==================== */
