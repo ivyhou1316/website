@@ -11,7 +11,7 @@ server.get("/",function(req,res){ //web root
  server.get("*",function(req,res){ //other pages
  	res.send("Page not found", 404);
  });
- server.listen(8080);
+ server.listen(80);
 console.log("Express run on port: 8080");
 //run: node server.js
 //browser: http://localhost:8080
